@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/inputRate"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="fill_parent"
+            android:inputType="numberDecimal"
+            android:focusable="false"
+            />
+
+        <Spinner
+            android:id="@+id/currencySpinner"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputAmountWrapper"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/inputAmount"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/inputRateWrapper"
+                android:hint="Enter Amount"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:text="BGN" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/inputAmountWrapper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="waiting for input..."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/calculate_btn"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"/>
+
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/reset" />
+    </LinearLayout>
+
+</LinearLayout>
